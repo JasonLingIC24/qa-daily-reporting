@@ -3,6 +3,7 @@ export interface ConfluenceConfig {
   email: string;
   apiToken: string;
   spaceKey: string;
+  rootPageId: string;
 }
 
 export function getConfluenceConfig(): ConfluenceConfig {
@@ -11,5 +12,6 @@ export function getConfluenceConfig(): ConfluenceConfig {
     email: process.env.CONFLUENCE_USER_EMAIL ?? "",
     apiToken: process.env.CONFLUENCE_API_TOKEN ?? "",
     spaceKey: process.env.CONFLUENCE_SPACE_KEY ?? "",
+    rootPageId: process.env.CONFLUENCE_ROOT_PAGE_ID ?? "",
   };
 }
